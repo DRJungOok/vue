@@ -1,6 +1,6 @@
 <script setup>
-import {ref, watch} from "vue";
-import vueMounted from './VueMounted.vue'
+import {ref} from "vue";
+import vueMounted from './components/VueMounted.vue'
 let id = 0;
 
 const message = ref('hello world');
@@ -64,7 +64,7 @@ function removeTodo(rTd) {
   <br>
 
   <!--https://vuejs.org/tutorial/#step-6-->
-  <button @click="toggle">Toggle</button>
+  <button @click="toggle">if else Toggle</button>
   <h1 v-if="awesome">if</h1>
   <h1 v-else="awesome">else</h1>
   <br>
@@ -84,7 +84,7 @@ function removeTodo(rTd) {
   <button @click="hideCompleted = !hideCompleted">
     {{ hideCompleted ? 'Show all' : 'Hide completed' }}
   </button>
-  <a href="VueMounted.vue"></a>
+  <vueMounted/>
 </template>
 
 <style scoped>
